@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Terry: Service</title>
+
+    <!--website icon-->
+    <link rel="shortcut icon" href="../images/websiteIcon.png" type="image/png">
+
+    <!--local css imports-->
+    <link rel="stylesheet" href="../global/global.css">  <!--for global elements-->
+    <link rel="stylesheet" href="service.css">  <!--styling specific to index.html-->
+
+    <!--bootstrap css for page resizing/styling-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--Bootstrap CDN: icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--fonts-->
+    <!--poppins font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadToggle(); highlightHeader('service')">
+    <!--nav menu-->
+    <nav class="navbar fixed-top navbar-expand-md" name="home">
+        <!--toggle color scheme-->
+        <i class="fa fa-moon-o" onclick="invertColors(); highlightHeader('service')" id="colorIcon"><p id="colorIconDesc">(dark)</p></i>
+  
+        <!--button to toggle menu-->
+        <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            class="navbar-toggler"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle Menu"
+            onclick="changeIcon()">
+            <i class="fa fa-bars" id="navIcon"></i>
+        </button>
+            
+        <!--links on nav menu-->
+        <div class="nav-links collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a href="../" class="nav-link" id="home">HOME</a></li>
+                <li class="nav-item active"><a href="../portfolio/" class="nav-link" id="portfolio">PORTFOLIO</a></li>
+                <li class="nav-item active"><a href="../experience/" class="nav-link" id="experience">EXPERIENCE</a></li>
+                <li class="nav-item active"><a href="" class="nav-link" id="service">SERVICE</a></li>
+                <li class="nav-item active"><a href="https://github.com/caleb-terry17" class="nav-link" target="_blank">GITHUB</a></li>
+                <li class="nav-item active"><a href="https://www.linkedin.com/in/caleb-terry-91a447196/" class="nav-link" target="_blank">LINKEDIN</a></li>
+                <li class="nav-item active"><a href="mailto: k.cterry30@gmail.com" class="nav-link" target="_blank">CONTACT ME</a></li>
+            </ul>
+        </div>
+    </nav>
+        
+    <!--body-->
+    <section class="background container-fluid">
+        <div class="row justify-content-center">
+            <!--FREE: boys and girls club-->
+            <div class="col-10 box">
+                <!--header-->
+                <h1 class="highlight">Boys & Girls Club with FREE</h1>
+
+                <h3>(Freshman Reaching Excellence in Engineering)</h3>
+
+                <h1>September 2019 - March 2020</h1>
+
+                <!--description-->
+                <div class="row justify-content-center align-items-center">
+                    <!--description-->
+                    <div class="col-9 col-md-4">
+                        <h3 class="highlight">Hung out with kids playing basketball, pool, football, and various other fun games after school throughout the year.</h3>
+                    </div>
+
+                    <!--image-->
+                    <div class="col-9 col-md-4 box-img">
+                        <img src="../images/serviceBoysAndGirlsClub.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!--FREE: clean the street-->
+            <div class="col-10 box">
+                <!--header-->
+                <h1 class="highlight">Clean the Street with FREE</h1>
+
+                <h3>(Freshman Reaching Excellence in Engineering)</h3>
+
+                <h1>September 2019 - March 2020</h1>
+
+                <!--description-->
+                <div class="row justify-content-center align-items-center">
+                    <!--image-->
+                    <div class="col-9 col-md-4 box-img">
+                        <img src="../images/serviceCleanTheStreet.jpg" class="img-fluid">
+                    </div>
+
+                    <!--description-->
+                    <div class="col-9 col-md-4">
+                        <h3 class="highlight">Picked up trash on the side of a road in College Station multiple times throughout my Freshman year with my FLO (Freshman Leadership Organization) FREE.</h3>
+                    </div>
+                </div>
+            </div>
+                
+            <!--NYLT-->
+            <div class="col-10 box">
+                <!--header-->
+                <h1 class="highlight">National Youth Leadership Training Staff</h1>
+                    
+                <h1>November 2017 & 2018</h1>
+
+                <!--description-->
+                <div class="row justify-content-center align-items-center">
+                    <!--description-->
+                    <div class="col-9 col-md-4">
+                        <h3 class="highlight">Taught youth not only the attributes and characteristics of an effective leader but also how to be someone that people want to follow.</h3>
+                    </div>
+
+                    <!--image-->
+                    <div class="col-9 col-md-4 box-img">
+                        <img src="../images/serviceNYLT.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <!--eagle scout project-->
+            <div class="col-10 box">
+                <!--header-->
+                <h1 class="highlight">Eagle Scout Project</h1>
+
+                <h1>December 2016</h1>
+
+                <!--description-->
+                <div class="row justify-content-center align-items-center">
+                    <!--image-->
+                    <div class="col-9 col-md-4 box-img">
+                        <img src="../images/serviceEagleScoutProject.jpg" class="img-fluid">
+                    </div>
+
+                    <!--description-->
+                    <div class="col-9 col-md-4">
+                        <h3 class="highlight">Built Gaga Pit for Greggton United Methodist Church and members of the surrounding community.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--footer-->
+    <section class="footer">
+        <h4>Designed by Caleb Terry</h4>
+        <h4>Built with <a href="https://getbootstrap.com/">Bootstrap</a></h4>
+  
+        <div class="icons">
+            <a href="mailto: calebterry@tamu.edu">
+                <i class="fa fa-envelope"></i>
+            </a>
+    
+            <a href="https://www.linkedin.com/in/caleb-terry-91a447196/" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+    
+            <a href="https://github.com/caleb-terry17" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!--JavaScript: for toggling-->
+    <script src="../global/global.js"></script>
+    <!--JavaScript: bootstrap for page resizing/styling-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

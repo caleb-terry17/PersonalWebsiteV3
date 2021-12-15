@@ -1,0 +1,160 @@
+/* global elements */
+:root {
+    --color1: #FEFE0E;
+    /* --color2: #800000; */
+    --color2: #5690e6;
+    --color3: #000000;
+    --color4: #FFF;
+    --color5: #646464;
+}
+
+/* to apply to everything for this page */
+* {
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* nav menu */
+.navbar {
+    background-color: var(--color4);
+}
+
+.navbar a {
+    color: var(--color3);
+}
+
+.navbar a:hover {
+    color: var(--color2);
+}
+
+.navbar .fa {
+    color: var(--color3);
+}
+
+.navbar button:hover .fa {
+    color: var(--color2);
+}
+
+#colorIcon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    /* margin: 0 50px; */
+}
+
+#colorIcon:hover {
+    color: var(--color2);
+    cursor: pointer;
+}
+
+#colorIcon:hover p {
+    color: var(--color2);
+    cursor: pointer;
+}
+
+#colorIcon p {
+    left: 25px;
+    display: inline-block;
+}
+
+/* body/background */
+.background {
+    width: 100%;
+    min-height: 85vh;
+    padding: 150px 0;
+    background-color: var(--color4);
+    text-align: center;
+}
+
+.background h1 {
+    font-size: 50px;
+    color: var(--color3);
+    margin: 50px 0;
+}
+
+/* footer */
+.footer {
+    min-height: 15vh;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--color4);
+}
+
+.footer h4 {
+    font-size: 15px;
+    color: var(--color3);
+}
+
+.footer h4 a {
+    color: var(--color2);
+}
+
+.icons .fa {
+    color: var(--color3);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.icons .fa:hover {
+    color: var(--color2);
+}
+
+.icons a {
+    text-decoration: none;
+}
+
+/* boxed elements */
+
+.box {
+    border: solid;
+    border-radius: 10px;
+    border-color: var(--color3);
+    font-weight: 600;
+    padding: 20px;
+    margin: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px 5px var(--color3);
+}
+
+/* for highlighting text in boxes */
+.box:hover .highlight {
+    color: var(--color2);
+}
+
+/* for any links inside a box, to have an automatic underline and highlight */
+.box .link {
+    color: var(--color2);
+    text-decoration: underline;
+}
+
+.box:hover .link {
+    color: var(--color2);
+    text-decoration: underline;
+}
+
+/* for keeping text normal in boxes */
+.box:hover .normal {
+    color: var(--color3);
+}
+
+.box-img {
+    padding: 40px;
+}
+
+/* for smaller screens */
+@media(max-width: 767px) {
+    /* nav menu */
+    #colorIcon {
+        position: absolute;
+        top: 15px;
+        justify-self: left;
+        margin: 0 50px;
+    }
+}

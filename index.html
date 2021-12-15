@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Terry Personal Website</title>
+
+    <!--website icon-->
+    <link rel="shortcut icon" href="images/websiteIcon.png" type="image/png">
+
+    <!--local css imports-->
+    <link rel="stylesheet" href="global/global.css">  <!--for global elements-->
+    <link rel="stylesheet" href="home.css">  <!--styling specific to index.html-->
+
+    <!--bootstrap css for page resizing/styling-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--Bootstrap CDN: icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--fonts-->
+    <!--poppins font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--howdy block font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <!--cursive name-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body onload="loadToggle(); highlightHeader('home'); startPictureCycle()" onunload="stopPictureCycle()">
+    <!--nav menu-->
+    <nav class="navbar fixed-top navbar-expand-md" name="home">
+        <!--toggle color scheme-->
+        <i class="fa fa-moon-o" onclick="invertColors(); highlightHeader('home')" id="colorIcon"><p id="colorIconDesc">(dark)</p></i>
+
+        <!--button to toggle menu-->
+        <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            class="navbar-toggler"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle Menu"
+            onclick="changeIcon()">
+            <i class="fa fa-bars" id="navIcon"></i>
+        </button>
+        
+        <!--links on nav menu-->
+        <div class="nav-links collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a href="" class="nav-link" id="home">HOME</a></li>
+                <li class="nav-item active"><a href="portfolio/" class="nav-link" id="portfolio">PORTFOLIO</a></li>
+                <li class="nav-item active"><a href="experience/" class="nav-link" id="experience">EXPERIENCE</a></li>
+                <li class="nav-item active"><a href="service/" class="nav-link" id="service">SERVICE</a></li>
+                <li class="nav-item active"><a href="https://github.com/caleb-terry17" class="nav-link" target="_blank">GITHUB</a></li>
+                <li class="nav-item active"><a href="https://www.linkedin.com/in/caleb-terry-91a447196/" class="nav-link" target="_blank">LINKEDIN</a></li>
+                <li class="nav-item active"><a href="mailto: k.cterry30@gmail.com" class="nav-link" target="_blank">CONTACT ME</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!--body-->
+    <section class="body">
+        <!--bio-->
+        <div class="row justify-content-center">
+            <div class="col-10 bio box">
+                <h1 class="highlight">Caleb Terry</h1>
+                <div class="col-9"><p class="about">Howdy, I'm a double Computer Science and Applied Mathematics Major at Texas A&M University with a Minor in Cybersecurity. I love utilizing Computer Science to apply math solving tough problems in interesting ways!</p></div>
+                <div class="col-9"><p class="about">I have aspirations to feel like I'm not working a day in my life after I graduate. I want to find a job where I not only enjoy the people I'm working with but also appreciate what I do every day so that what is called work, doesn't actually feel like work.</p></div>
+                <div class="col-9"><p class="about">My interests mainly inlclude Software Engineering at the moment, but I am open to trying all disciplines in the world of Computer Science so that I know that when I accept a job offer, it's what I want to do.</p></div>            
+            </div>
+        </div>
+
+        <!--main image-->
+        <div class="row justify-content-center">
+            <div class="col-10 box box-img">
+                <img class="img-fluid" id="homepageImg">
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+        <h4>Designed by Caleb Terry</h4>
+        <h4>Built with <a href="https://getbootstrap.com/">Bootstrap</a></h4>
+
+        <div class="icons">
+            <a href="mailto: calebterry@tamu.edu">
+                <i class="fa fa-envelope"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/caleb-terry-91a447196/" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/caleb-terry17" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+        </div>
+    </section>
+
+    <!--JavaScript: for home page-->
+    <script src="home.js"></script>
+    <!--JavaScript: for toggling-->
+    <script src="global/global.js"></script>
+    <!--JavaScript: bootstrap for page resizing/styling-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Terry: Experience</title>
+
+    <!--website icon-->
+    <link rel="shortcut icon" href="../images/websiteIcon.png" type="image/png">
+
+    <!--local css imports-->
+    <link rel="stylesheet" href="../global/global.css">  <!--for global elements-->
+    <link rel="stylesheet" href="experience.css">  <!--styling specific to index.html-->
+
+    <!--bootstrap css for page resizing/styling-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--Bootstrap CDN: icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--fonts-->
+    <!--poppins font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="loadToggle(); highlightHeader('experience')">
+    <!--nav menu-->
+    <nav class="navbar fixed-top navbar-expand-md" name="home">
+        <!--toggle color scheme-->
+        <i class="fa fa-moon-o" onclick="invertColors(); highlightHeader('experience')" id="colorIcon"><p id="colorIconDesc">(dark)</p></i>
+
+        <!--button to toggle menu-->
+        <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            class="navbar-toggler"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle Menu"
+            onclick="changeIcon()">
+            <i class="fa fa-bars" id="navIcon"></i>
+        </button>
+            
+        <!--links on nav menu-->
+        <div class="nav-links collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a href="../" class="nav-link" id="home">HOME</a></li>
+                <li class="nav-item active"><a href="../portfolio/" class="nav-link" id="portfolio">PORTFOLIO</a></li>
+                <li class="nav-item active"><a href="" class="nav-link" id="experience">EXPERIENCE</a></li>
+                <li class="nav-item active"><a href="../service/" class="nav-link" id="service">SERVICE</a></li>
+                <li class="nav-item active"><a href="https://github.com/caleb-terry17" class="nav-link" target="_blank">GITHUB</a></li>
+                <li class="nav-item active"><a href="https://www.linkedin.com/in/caleb-terry-91a447196/" class="nav-link" target="_blank">LINKEDIN</a></li>
+                <li class="nav-item active"><a href="mailto: k.cterry30@gmail.com" class="nav-link" target="_blank">CONTACT ME</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!--body-->
+    <section class="background container-fluid">
+        <!--resume-->
+        <div class="row justify-content-center">
+            <div class="col-10 bio box">
+                <a href="https://calebrterry.com/files/Caleb_Terry_Resume.pdf" target="_blank"><h2 class="link">RESUME</h2></a>            
+            </div>
+        </div>
+
+        <!--skills-->
+        <h1>SKILLS</h1>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">C++</h5></div>            
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">Python</h5></div>
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">Git/GitHub</h5></div>
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">Java</h5></div>
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">HTML/CSS</h5></div>
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">JavaScript</h5></div> 
+            <div class="col-4 col-md-3 bio box"><h5 class="highlight">Flutter/Dart</h5></div>
+        </div>
+
+        <!--relevant coursework-->
+        <h1>RELEVANT COURSEWORK</h1>
+        <div class="row justify-content-center">
+            <!--comp sci-->
+            <div class="col-10 bio box">
+                <h3 class="highlight">COMPUTER SCIENCE</h3>
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-4"><p>Data Structures and Algorithms</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Discrete Structures for Computing</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Computer Architecture and Organization</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Introduction to Computer Systems</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Programming Languages</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Programming Studio</p></div>
+                </div>
+            </div>
+                
+            <!--math-->
+            <div class="col-10 bio box">
+                <h3 class="highlight">MATHEMATICS</h3>
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-4"><p>Calculus I, II, & III</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Advanced Calculus I</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Differential Equations</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Linear Algebra I & II</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Mathematics of Interest</p></div>
+                    <div class="col-sm-8 col-md-4"><p>Communications & Cryptography</p></div>
+                </div>
+            </div>
+                
+
+            <!--statistics-->
+            <div class="col-10 bio box">
+                <h3 class="highlight">STATISTICS</h3>
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-md-4"><p>Principles of Statistics I</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!--work experience-->
+        <h1 class="header">WORK EXPERIENCE</h1>
+        <div class="row justify-content-center">
+            <a href="https://engineering.tamu.edu/" target="_blank" class="col-8 col-sm-7 col-md-4 col-lg-3 work box">
+                <h3 class="link">TEXAS A&M UNIVERSITY COLLEGE OF ENGINEERING</h3>
+                <h5 class="highlight">Peer Teacher</h5>
+                <p class="normal">Janurary 2021 - Present</p>
+                <p class="normal">College Station, Texas, United States</p>
+                <p class="normal">Answer questions from students on various topics and give assistance on homework problems across a multitude of Computer Science courses.</p>
+                        
+                <br>
+    
+                <h5 class="highlight">Student Assistant</h5>
+                <p class="normal">August 2020 - December 2020</p>
+                <p class="normal">College Station, Texas, United States</p>
+                <p class="normal">Assist Professor with answering student questions in lectures and help students on labs and homework assignments.</p>
+            </a>
+
+            <a href="https://www.fastenal.com/" target="_blank" class="col-8 col-sm-7 col-md-4 col-lg-3 work box">
+                <h3 class="link">FASTENAL COMPANY</h3>
+                <h5 class="highlight">Data Analyst Intern (Volunteer)</h5>
+                <p class="normal">April 2020 - Present</p>
+                <p class="normal">Longview, Texas, United States</p>
+                <p class="normal">Designed Excel Macro in VBA to sort and analyze group of inventory files for stores to find static inventory which is then moved throughout the region. Analyze array of other data files to provide crucial analysis on sales and current company inventory.</p>
+
+                <br>
+
+                <h5 class="highlight">Warehouse Laborer</h5>
+                <p class="normal">June 2021 - July 2021</p>
+                <p class="normal">Longview, Texas, United States</p>
+                <p class="normal">Organized warehouse and assisted sales associates on fulfilling orders.</p>
+            </a>
+
+            <a href="https://longviewtexas.gov/" target="_blank" class="col-8 col-sm-7 col-md-4 col-lg-3 work box">
+                <h3 class="link">CITY OF LONGVIEW</h3>
+                <h5 class="highlight">Head Lifeguard</h5>
+                <p class="normal">June - August, 2020 - 2021</p>
+                <p class="normal">Longview, Texas, United States</p>
+                <p class="normal">Assist lifeguards throughout day in supervising Patrons to ensure they are being safe and using all facility equipment correctly.</p>
+                        
+                <br>
+    
+                <h5 class="highlight">Lifeguard</h5>
+                <p class="normal">June - August, 2018 - 2021</p>
+                <p class="normal">Longview, Texas, United States</p>
+                <p class="normal">Supervise Patrons to ensure they are being safe and using all facility equipment correctly. Also clean the facility at the end of the day.</p>
+            </a>
+
+            <div class="col-8 col-sm-7 col-md-4 col-lg-3 work box">
+                <h3 class="highlight">SELF-EMPLOYED</h3>
+                <h5 class="highlight">Private Tutor</h5>
+                <p class="normal">September 2020 - April 2021</p>
+                <p class="normal">College Station, Texas, United States</p>
+                <p class="normal">Meet with client to teach important ideas or principles they are struggling with and guide through homework assignments in Computer Science, Math, and Physics classes.</p>
+            </div>
+
+            <a href="http://www.ptisd.org/" target="_blank" class="col-8 col-sm-7 col-md-4 col-lg-3 work box">
+                <h3 class="link">PINE TREE ISD</h3>
+                <h5 class="highlight">Technology Department Intern</h5>
+                <p class="normal">June 2020 - August 2020</p>
+                <p class="normal">Longview, Texas, United States</p>
+                <p class="normal">Setup new desktop computers and Chromebooks. Ran cable in classrooms throughout school district buildings. Cleared old iPad's and Chromebooks then set up under new domain for school district.</p>
+            </a>
+        </div>
+    </section>
+    
+    <!--footer-->
+    <section class="footer">
+        <h4>Designed by Caleb Terry</h4>
+        <h4>Built with <a href="https://getbootstrap.com/">Bootstrap</a></h4>
+    
+        <div class="icons">
+            <a href="mailto: calebterry@tamu.edu">
+                <i class="fa fa-envelope"></i>
+            </a>
+    
+            <a href="https://www.linkedin.com/in/caleb-terry-91a447196/" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+    
+            <a href="https://github.com/caleb-terry17" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!--JavaScript: for toggling-->
+    <script src="../global/global.js"></script>
+    <!--JavaScript: bootstrap for page resizing/styling-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
