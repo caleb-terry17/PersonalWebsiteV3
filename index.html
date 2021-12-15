@@ -33,7 +33,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-<body onload="loadToggle(); highlightHeader('home'); startPictureCycle()" onunload="stopPictureCycle()">
+<body class = "body" onload="loadToggle(); highlightHeader('home'); startPictureCycle()" onunload="stopPictureCycle()">
+    <!------------------------------------------------------------------------>
     <!--nav menu-->
     <nav class="navbar fixed-top navbar-expand-md" name="home">
         <!--toggle color scheme-->
@@ -66,27 +67,121 @@
         </div>
     </nav>
     
-
-    <!--body-->
-    <section class="body">
-        <!--bio-->
+    <!------------------------------------------------------------------------>
+    <!--header-->
+    <section class="header">
         <div class="row justify-content-center">
+            <div class="intro row col-10 box">
+                <!--intro-->
+                <div class="col-8 col-lg-4">
+                    <h1 class="highlight name">Caleb Terry</h1>
+                    <h2 class="highlight title">Incoming Software Engineer Intern at <br><a href="https://www.text-em-all.com/">Text-Em-All</a></h2>
+                </div>
+
+                <!--intro images-->
+                <div class="col-8 col-lg-4">
+                    <img class="img-fluid" id="homepageImg">
+                </div>
+            </div>
+
+            <!--bio-->
             <div class="col-10 bio box">
-                <h1 class="highlight">Caleb Terry</h1>
+                <!-- <h1 class="highlight">Caleb Terry</h1> -->
                 <div class="col-9"><p class="about">Howdy, I'm a double Computer Science and Applied Mathematics Major at Texas A&M University with a Minor in Cybersecurity. I love utilizing Computer Science to apply math solving tough problems in interesting ways!</p></div>
                 <div class="col-9"><p class="about">I have aspirations to feel like I'm not working a day in my life after I graduate. I want to find a job where I not only enjoy the people I'm working with but also appreciate what I do every day so that what is called work, doesn't actually feel like work.</p></div>
                 <div class="col-9"><p class="about">My interests mainly inlclude Software Engineering at the moment, but I am open to trying all disciplines in the world of Computer Science so that I know that when I accept a job offer, it's what I want to do.</p></div>            
             </div>
         </div>
+    </section>
 
-        <!--main image-->
+    <!------------------------------------------------------------------------>
+    <!--portfolio-->
+    <section class="background container-fluid">
+        <!--projects-->
+        <h1>PROJECTS</h1>
         <div class="row justify-content-center">
-            <div class="col-10 box box-img">
-                <img class="img-fluid" id="homepageImg">
+            <!--MyList-->
+            <div class="col-8 col-sm-7 col-md-4 col-lg-3 box">
+                <a href="https://github.com/caleb-terry17/MyList" target="_blank">
+                    <img src="../images/projectsMyListIcon.png">
+                    <div class="description">
+                        <!--name of project-->
+                        <h3 class="highlight">MyList App</h3>
+                        <!--github link (appears on hover (need to appear always on mobile))-->
+                        <h4 class="link">GitHub</h4>
+                        <!--description of project-->
+                        <p>App built using Flutter/Dart framework which allows users to create, edit, share, and delete lists.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!--Personal Website: Version 1-->
+            <div class="col-8 col-sm-7 col-md-4 col-lg-3 box">
+                <a href="https://github.com/caleb-terry17/PersonalWebsite" target="_blank">
+                    <img src="../images/projectsPersonalWebsite1Icon.jpg">
+                    <div class="description">
+                        <!--name of project-->
+                        <h3 class="highlight">Personal Website: Version 1</h3>
+                        <!--github link (appears on hover (need to appear always on mobile))-->
+                        <h4 class="link">GitHub</h4>
+                        <!--description of project-->
+                        <p>Built personal webpage to showcase experience and work history from scratch utilizing HTML, CSS, and JavaScript.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!--Personal Website: Version 2-->
+            <div class="col-8 col-sm-7 col-md-4 col-lg-3 box">
+                <a href="https://github.com/caleb-terry17/PersonalWebsite" target="_blank">
+                    <img src="../images/projectsPersonalWebsite2Icon.jpg">
+                    <div class="description">
+                        <!--name of project-->
+                        <h3 class="highlight">Personal Website: Version 2</h3>
+                        <!--github link (appears on hover (need to appear always on mobile))-->
+                        <h4 class="link">GitHub</h4>
+                        <!--description of project-->
+                        <p>Developed website for school project with Bootstrap as well as my own HTML, CSS, and JavaScript for select features.</p>
+                    </div>
+                </a>
+            </div>
+        </div>  
+            
+        <!--hackathons-->
+        <h1>HACKATHONS</h1>
+        <div class="row justify-content-center">
+            <!--TAMUHack 2020-->
+            <div class="col-8 col-sm-7 col-md-4 col-lg-3 box">
+                <a href="https://devpost.com/software/comhand" target="_blank">
+                    <!-- <img src="../images/tamuHack2020Logo.png"> -->
+                    <div class="description">
+                        <!--hackathon + project name-->
+                        <h3 class="highlight">COMHAND <br> TAMUHack 2020</h3>
+                        <!--devpost link (appears on hover (need to appear always on mobile))-->
+                        <h4 class="link">Devpost</h4>
+                        <!--description of project-->
+                        <p>Implemented Google’s Vision API with Python to allow web manipulation through hand signals to computer webcam.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!--HowdyHack 2021-->
+            <div class="col-8 col-sm-7 col-md-4 col-lg-3 box">
+                <a href="https://devpost.com/software/aggieconnect" target="_blank">
+                    <!-- <img src="../images/howdyHack2021Logo.png"> -->
+                    <div class="description">
+                        <!--hackathon + project name-->
+                        <h3 class="highlight">AggieConnect <br> HowdyHack 2021</h3>
+                        <!--devpost link (appears on hover (need to appear always on mobile))-->
+                        <h4 class="link">Devpost</h4>
+                        <!--description of project-->
+                        <p>Produced app to increase Aggie interactions throughout College Station area with people of similar mask and vaccination preferences utilizing Google's Flutter Framework</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
+    <!------------------------------------------------------------------------>
     <!--footer-->
     <section class="footer">
         <h4>Designed by Caleb Terry</h4>
