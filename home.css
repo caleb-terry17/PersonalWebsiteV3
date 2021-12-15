@@ -1,4 +1,4 @@
-/* styling for index.html page */
+/* global styling for index.html page */
 .body {
     padding-top: 100px;
     width: 100%;
@@ -6,7 +6,24 @@
     background-color: var(--color4);
 }
 
+section h1 {
+    text-align: center;
+}
+
+section h2 {
+    text-align: center;
+}
+
 /* header */
+.header {
+    padding: 7vh 0;
+    min-height: 100vh;
+}
+
+.header .intro {
+    margin-bottom: 5vh;
+}
+
 .header .intro img {
     max-height: 250px;
     border-radius: 10px;
@@ -23,11 +40,6 @@
     font-size: 30px;
     text-decoration: none;
 }
-
-/* .header .title a {
-    color: var(--color3);
-    text-decoration: none;
-} */
 
 .bio {
     margin: 30px;
@@ -74,11 +86,15 @@
 }
 
 /* portfolio */
-.background a {
+.portfolio {
+    padding-top: 7vh;
+}
+
+.portfolio a {
     text-decoration: none;
 }
 
-.background img {
+.portfolio img {
     width: 100%;
     /* this margin positions each img in the projects-col div tag in the center of its space */
     margin-left: auto;
@@ -87,11 +103,11 @@
     border-radius: 7%;
 }
 
-.row {
+.portfolio .row {
     padding: 100px 0;
 }
 
-.description {
+.portfolio .description {
     color: var(--color3);
     text-align: center;
     padding-bottom: 30px;
