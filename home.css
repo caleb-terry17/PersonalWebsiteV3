@@ -14,6 +14,10 @@ section h2 {
     text-align: center;
 }
 
+.text {
+    color: var(--color3);
+}
+
 /* header */
 .header {
     padding: 7vh 0;
@@ -118,8 +122,8 @@ section h2 {
     padding-top: 10vh;
 }
 
-.experience-item {
-    padding-top: 5vh;
+.experience-item h1 {
+    padding: 10vh 0;
 }
 
 /* resume */
