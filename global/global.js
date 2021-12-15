@@ -26,8 +26,6 @@ let icons = {
 
 // to hold colors for easy swaps
 let colors = {
-    // "#5690E6" : "#800000",
-    // "#800000": "#5690E6",
     "#5690E6" : "#FEFE0E",
     "#FEFE0E": "#5690E6",
     "#FFF": "#000000",
@@ -77,17 +75,6 @@ function loadToggle() {
         localStorage.setItem("colorIconDesc", "(dark)");
     }
 
-    // testing::delete
-    // localStorage.setItem("color2", "#FEFE0E");
-    // localStorage.setItem("color2", "#5690E6"); 
-    // localStorage.setItem("color3", "#000000");
-    // localStorage.setItem("color4", "#FFF"); 
-    // localStorage.setItem("colorIconDesc", "(dark)");
-    // console.log(localStorage.getItem("color1"));
-    // console.log(localStorage.getItem("color2"));
-    // console.log(localStorage.getItem("color3"));
-    // console.log(localStorage.getItem("color4"));
-
     // color1
     style.setProperty("--color1", localStorage.getItem("color1"));
     // color2
@@ -132,7 +119,7 @@ function invertColors() {
 ///////////////////
 
 // will change current page header text to be highlighted 
-function highlightHeader(page) {
-    // setting current page header color
-    document.getElementById(page).style.color = localStorage.getItem("color2");
-}
+// function highlightHeader(page) {
+//     // setting current page header color
+//     document.getElementById(page).style.color = localStorage.getItem("color2");
+// }

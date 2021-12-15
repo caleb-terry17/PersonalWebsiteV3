@@ -33,12 +33,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
-<body class = "body" onload="loadToggle(); highlightHeader('home'); startPictureCycle()" onunload="stopPictureCycle()">
+<body class = "body" onload="loadToggle(); updateNav(); startPictureCycle(); setPositions()" onunload="stopPictureCycle()">
     <!------------------------------------------------------------------------>
     <!--nav menu-->
     <nav class="navbar fixed-top navbar-expand-md" name="home">
         <!--toggle color scheme-->
-        <i class="fa fa-moon-o" onclick="invertColors(); highlightHeader('home')" id="colorIcon"><p id="colorIconDesc">(dark)</p></i>
+        <i class="fa fa-moon-o" onclick="invertColors(); updateNav()" id="colorIcon"><p id="colorIconDesc">(dark)</p></i>
 
         <!--button to toggle menu-->
         <button
@@ -59,7 +59,6 @@
                 <li class="nav-item active"><a href="#homeLink" class="nav-link" id="home">HOME</a></li>
                 <li class="nav-item active"><a href="#portfolioLink" class="nav-link" id="portfolio">PORTFOLIO</a></li>
                 <li class="nav-item active"><a href="#experienceLink" class="nav-link" id="experience">EXPERIENCE</a></li>
-                <li class="nav-item active"><a href="service/" class="nav-link" id="service">SERVICE</a></li>
                 <li class="nav-item active"><a href="https://github.com/caleb-terry17" class="nav-link" target="_blank">GITHUB</a></li>
                 <li class="nav-item active"><a href="https://www.linkedin.com/in/caleb-terry-91a447196/" class="nav-link" target="_blank">LINKEDIN</a></li>
                 <li class="nav-item active"><a href="mailto: k.cterry30@gmail.com" class="nav-link" target="_blank">CONTACT ME</a></li>
@@ -69,7 +68,7 @@
     
     <!------------------------------------------------------------------------>
     <!--header-->
-    <a name="homeLink"></a>  <!--link to shortcut to this section-->
+    <a name="homeLink" id="homeSection"></a>  <!--link to shortcut to this section-->
     <section class="header">
         <div class="row justify-content-center">
             <div class="intro row col-10 box">
@@ -97,7 +96,7 @@
 
     <!------------------------------------------------------------------------>
     <!--portfolio-->
-    <a name="portfolioLink"></a>  <!--link to shortcut to this section-->
+    <a name="portfolioLink" id="portfolioSection"></a>  <!--link to shortcut to this section-->
     <section class="portfolio container-fluid">
         <!--projects-->
         <h1 class="text">PROJECTS</h1>
@@ -185,7 +184,7 @@
 
     <!--experience-->
     <!------------------------------------------------------------------------>
-    <a name="experienceLink"></a>  <!--link to shortcut to this section-->
+    <a name="experienceLink" id="experienceSection"></a>  <!--link to shortcut to this section-->
     <section class="experience container-fluid">
         <!--resume-->
         <div class="experience-item">

@@ -30,3 +30,55 @@ function startPictureCycle() {
 function stopPictureCycle() {
     clearInterval(imageCycleId);
 }
+
+///////////////////
+// get y positions of elements
+///////////////////
+
+let headerPos;
+let portfolioPos;
+let experiencePos;
+
+// event listener to track scrolling
+window.addEventListener("scroll", updateNav, false);
+
+// gets the position of the element input
+function getPosition(elem) {
+    var yPos = 0;
+   
+    while (elem) {
+        // update y position
+        yPos += (elem.offsetTop - elem.scrollTop + elem.clientTop);
+        elem = elem.offsetParent;
+    }
+    return yPos;
+}
+
+// retrieves and sets the position of each section 
+function setPositions() {
+    headerPos = getPosition(document.getElementById("homeSection"));
+    portfolioPos = getPosition(document.getElementById("portfolioSection"));
+    experiencePos = getPosition(document.getElementById("experienceSection"));
+}
+
+// updates the nav item that is highlighted
+function updateNav() {
+    let currPos = document.documentElement.scrollTop;
+    if (currPos < portfolioPos) { highlightHeader("home"); }
+    else if (currPos < experiencePos) { highlightHeader("portfolio"); }
+    else { highlightHeader("experience"); }
+}
+
+///////////////////
+// nav bar highlighting text feature
+///////////////////
+
+// will change current page header text to be highlighted 
+function highlightHeader(page) {
+    // resetting all to default color
+    document.getElementById("home").style.color = localStorage.getItem("color3");
+    document.getElementById("portfolio").style.color = localStorage.getItem("color3");
+    document.getElementById("experience").style.color = localStorage.getItem("color3");
+    // setting current page header color
+    document.getElementById(page).style.color = localStorage.getItem("color2");
+}
