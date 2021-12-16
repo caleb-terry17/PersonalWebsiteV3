@@ -64,6 +64,8 @@ function setPositions() {
 // updates the nav item that is highlighted
 function updateNav() {
     let currPos = document.documentElement.scrollTop;
+    console.log("curr: " + currPos);
+    console.log("port: " + portfolioPos);
     if (currPos < portfolioPos) { highlightHeader("home"); }
     else if (currPos < experiencePos) { highlightHeader("portfolio"); }
     else { highlightHeader("experience"); }
