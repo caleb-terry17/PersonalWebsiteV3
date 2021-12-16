@@ -113,13 +113,3 @@ function invertColors() {
     // storing new desc
     localStorage.setItem("colorIconDesc", colorIconDesc.innerHTML);
 }
-
-///////////////////
-// hover effect on current page tab
-///////////////////
-
-// will change current page header text to be highlighted 
-// function highlightHeader(page) {
-//     // setting current page header color
-//     document.getElementById(page).style.color = localStorage.getItem("color2");
-// }
