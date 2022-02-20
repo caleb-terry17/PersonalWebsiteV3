@@ -144,7 +144,7 @@ function computeLCS() {
     // constructing output
     let recStr = listToString(recursive.list);
     let dynStr = listToString(dynamic.list);
-    let recTag = `<h3>Recursive Approach:</h3> <p>Function Iterations: ${recursive.iter}</p> <p>LCS: ${recStr}</p> <p>Length: ${recursive.list.length}</p>`;
-    let dynTag = `<h3>Dynamic Approach:</h3> <p>Loop Iterations: ${dynamic.iter}</p> <p>LCS: ${dynStr}</p> <p>Length: ${dynamic.list.length}</p>`;
+    let recTag = `<h3 class="text">Recursive Approach:</h3> <p class="text">Function Iterations: ${recursive.iter}</p> <p class="text">LCS: ${recStr}</p> <p class="text">Length: ${recursive.list.length}</p>`;
+    let dynTag = `<h3 class="text">Dynamic Approach:</h3> <p class="text">Loop Iterations: ${dynamic.iter}</p> <p class="text">LCS: ${dynStr}</p> <p class="text">Length: ${dynamic.list.length}</p>`;
     lcsOut.innerHTML = recTag + "<br>" + dynTag;
 }
