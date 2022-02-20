@@ -1,16 +1,3 @@
-/* global styling for index.html page */
-section h1 {
-    text-align: center;
-}
-
-section h2 {
-    text-align: center;
-}
-
-.text {
-    color: var(--color3);
-}
-
 /* header */
 .header {
     padding: 7vh 0;
@@ -74,12 +61,6 @@ section h2 {
     /* cursive font */
     font-size: 75px;
     font-family: 'Allison', cursive;
-}
-
-.about {
-    margin: 10px;
-    width: 100%;
-    height: 100%;
 }
 
 /* portfolio */

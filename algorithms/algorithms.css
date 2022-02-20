@@ -1,19 +1,10 @@
-:root {
-    --color1: #000000;
-    --color2: #FFF;
+.header {
+    padding: 3vh 0;
 }
 
-.container {
-    border: solid;
-    border-radius: 10px;
-    border-color: var(--color1);
-    padding: 20px;
-    max-width: 300px;
-    margin: 10vh 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.box {
-    background-color: var(--color2);
+/* algorithms box styling */
+.description {
+    color: var(--color3);
+    text-align: center;
+    padding-bottom: 10px;
 }
