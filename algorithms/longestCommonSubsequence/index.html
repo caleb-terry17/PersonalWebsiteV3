@@ -152,7 +152,34 @@
         <!--dynamic-->
         <h3 class="text">Dynamic Programming</h3>
         <p class="text">
+            &nbsp;&nbsp;&nbsp;&nbsp; For the two input sequences X<sub>m</sub> = {x<sub>1</sub>, ..., x<sub>m</sub>}, Y<sub>n</sub> = {y<sub>1</sub>, ..., y<sub>n</sub>}, the dynamic approach requires utilizing an array of size (m + 1) X (n + 1) where m and n are the sizes of the two input sequences. This array needs to be filled from top to bottom in the following manner. Note that the input sequences are indexed from 1 to m or n while the array, which we usually refer to as the C table, will be indexed from 0 to m or n. 
 
+            <br>
+            <br>
+
+            &nbsp;&nbsp; C<sub>i,j</sub> = 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if i = 0 or j = 0
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = (C<sub>i-1,j-1</sub> + 1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if x<sub>i</sub> = y<sub>j</sub>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = max(C<sub>i,j-1</sub>, C<sub>i-1,j</sub>) &nbsp;&nbsp; if x<sub>i</sub> &ne; y<sub>j</sub>
+
+            <br>
+            <br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; The value stored at C<sub>m,n</sub> will be the length of the longest common subsequence formed from the two sequences. If you want to find the longest common subsequnce, you can traverse backwards through the array in the following fashion building the string. 
+
+            <br>
+            <br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; Let Z be an empty list i = m, j = n. While i &lt;= 0 and j &lt;= 0, do the following:
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if x<sub>i</sub> = y<sub>j</sub> then push x<sub>i</sub> to Z setting i = i - 1 and j = j - 1 for next loop iteation
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if C<sub>i,j-1</sub> &lt; C<sub>i-1,j</sub> then set j = j -1 for the next iteration
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; otherwise, set i = i - 1 for the next loop iteration
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; At the end of this, you should be at position 0, 0 in the C array with the longest common subsequence stored in Z. 
         </p>
     </div>
 
