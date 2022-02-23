@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subset Sum</title>
+
+    <!--website icon-->
+    <link rel="shortcut icon" href="../../images/ssIcon.png" type="image/png">
+
+    <!--local css imports-->
+    <link rel="stylesheet" href="../algorithms.css">  <!--styling specific to index.html-->
+    <link rel="stylesheet" href="../../global/global.css">  <!--global styling elements-->    
+
+    <!--bootstrap css for page resizing/styling-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--Bootstrap CDN: icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body" onload="loadToggle()">
+    <!--nav menu-->
+    <nav class="navbar fixed-top navbar-expand-md" name="home">
+        <!--toggle color scheme-->
+        <i class="fa fa-moon-o" onclick="invertColors(); updateNav()" id="colorIcon"><p id="colorIconDesc">(dark)</p></i>
+
+        <!--button to toggle menu-->
+        <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            class="navbar-toggler"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle Menu"
+            onclick="changeIcon()">
+            <i class="fa fa-bars" id="navIcon"></i>
+        </button>
+        
+        <!--links on nav menu-->
+        <div class="nav-links collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a href="../../#homeLink" class="nav-link" id="home">HOME</a></li>
+                <li class="nav-item active"><a href="../" class="nav-link" id="algorithms">ALGORITHMS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--about/intro-->
+    <div class="container">
+        <h1 class="text">Subset Sum</h1>
+        <p class="text">
+            &nbsp;&nbsp;&nbsp;&nbsp; The subset sum takes a set of numbers and a target value, K. The goal is to see if there is a subset of the original set in which all the numbers in the subset add to K.
+        </p>
+
+        <br>
+
+        <!--what's a set-->
+        <h3 class="text">What's a Set?</h3>
+        <p class="text">
+            &nbsp;&nbsp;&nbsp;&nbsp; A set is a collection of items or elements much like a list or sequence where each element may only appear once and order of the elements does not matter.
+        </p>
+
+        <br>
+
+        <!--what's a subset-->
+        <h3 class="text">What's a Subset?</h3>
+        <p class="text">
+            &nbsp;&nbsp;&nbsp;&nbsp; A subset is any combination of elements from the original set, including the NULL set, that form a set.
+        </p>
+
+        <br>
+
+        <!--examples-->
+        <h3 class="text">Examples</h3>
+        <p class="text">
+            Let X = {1, 0, 5, 6, 23, 7, 10}
+
+            <br>
+            <br>
+
+            Subsets of X:
+            {0, 5, 6},  
+            {1, 5, 6, 23, 7, 0}, 
+            {1, 0, 5, 6, 23, 7, 10}, 
+            {23}
+
+            <br> 
+
+            There are many more, but those are a few examples.
+            
+            <br>
+            <br>
+
+            Non-Subsets of X:
+            {1, 20}, 
+            {5, 23, 6, 8}, 
+            {5, 7, 10, 1, 23, 0, 9}
+        </p>
+    </div>
+
+    <!--approaches-->
+    <div class="container">
+        <h1 class="text">Approaches</h1>
+
+        <br>
+
+        <!--brute force-->
+        <h3 class="text">Brute Force</h3>
+        <p class="text">
+            &nbsp;&nbsp;&nbsp;&nbsp; The easiest way to solve this problem is to just create all the possible sums of elements from the original set. If any of these sums are equivalent to the target sum then the subset sum problem would return true and false otherwise. However, the number of sums you would have to generate would be equivalent to the size of the powerset of the input set. In other words, this appraoch would be of exponential time or 2<sup>n</sup> where n is the size of the input set.
+        </p>
+        
+        <br>
+
+        <!--dynamic-->
+        <h3 class="text">Dynamic Programming</h3>
+        <p class="text">
+            &nbsp;&nbsp;&nbsp;&nbsp; Let S = {w<sub>1</sub>, ..., w<sub>n</sub>} be the input set and K be the target sum. To implement this with a dynamic approach, an array of size (n + 1) X (K + 1) would be required and finally, the truth value of P<sub>i,j</sub> represents whether the number j can be found from summing a subset of elements w<sub>1</sub>, ..., w<sub>i</sub>. 
+            
+            <br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; Next, you would iterate through each entry in the table, left to right and top to bottom. 
+
+            <br>
+            <br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P<sub>i,j</sub> = true &nbsp;&nbsp;&nbsp;&nbsp; if j == 0 <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = true &nbsp;&nbsp;&nbsp;&nbsp; if P<sub>i-1,j</sub> == true <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = true &nbsp;&nbsp;&nbsp;&nbsp; if j - w<sub>i</sub> &geq; and P<sub>i-1,j-w<sub>i</sub></sub> == true <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = false &nbsp;&nbsp;&nbsp; otherwise
+
+            <br>
+            <br>
+
+            &nbsp;&nbsp;&nbsp;&nbsp; If the value of the entry P<sub>i,j</sub> is true, then j can be constructed from the set of elements {w<sub>1</sub>, w<sub>i</sub>}. This means that if the value of P<sub>n,K</sub> == true, then K can be constructed from some subset of the elements in the set given. 
+        </p>
+    </div>
+
+    <!--input text box-->
+    <div class="container">
+        <h1 class="text">Try It!</h1>
+        <p class="text">Enter elements as a comma separated list.</p>
+        
+        <br>
+
+        <label class="text" for="set">Set:</label>
+        <input type="text" id="set" name="set"><br><br>
+        <label class="text" for="sum">K: &nbsp;&nbsp;</label>
+        <input type="text" id="sum" name="sum"><br><br>
+        <button onclick="computeSS()">
+            Compute
+        </button>  
+        
+        <br>
+        <br>
+
+        <div id="ssOut"></div>
+    </div>
+
+    <!--JavaScript: for lcs logic-->
+    <script src="ss.js"></script>
+    <!--JavaScript: global elements-->
+    <script src="../../global/global.js"></script>
+</body>
+</html>
