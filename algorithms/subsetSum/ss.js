@@ -79,7 +79,7 @@ function computeSS() {
     }
 
     // sorting set
-    list.sort();
+    list = list.sort();
 
     // making sure all positive numbers
     if (list[0] < 1) {
