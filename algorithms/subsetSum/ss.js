@@ -58,10 +58,10 @@ function computeSS() {
 
     // checking for too large of input
     if (set.length > 200) {
-        ssOut.innerHTML = "<h3>Input Too Large (>100 elements)</h3>";
+        ssOut.innerHTML = `<h3 class="text">Input Too Large (>100 elements)</h3>`;
         return; 
     } else if (k.length > 3) {
-        ssOut.innerHTML = "<h3>Input Too Large (>999)</h3>";
+        ssOut.innerHTML = `<h3 class="text">Input Too Large (>999)</h3>`;
         return; 
     }
 
@@ -83,18 +83,18 @@ function computeSS() {
 
     // making sure all positive numbers
     if (list[0] < 1) {
-        ssOut.innerHTML = "<h3>Must be all Positive Numbers</h3>";
+        ssOut.innerHTML = `<h3 class="text">Must be all Positive Numbers</h3>`;
     }
 
     // making sure elements are not repeating
     for (let i = 1; i < list.length; ++i) {
         if (list[i] == list[i - 1]) {
-            ssOut.innerHTML = `<h3>Not a Set (repeating elements: ${list[i]})</h3>`;
+            ssOut.innerHTML = `<h3 class="text">Not a Set (repeating elements: ${list[i]})</h3>`;
             return;
         }
     }
 
     // constructing output
     out = subsetSum(list, k);
-    ssOut.innerHTML = `<h3>It ${out.ss ? `is` : `is not`} possible to construct a sum of ${k} from the set ${listToString(list)}`;
+    ssOut.innerHTML = `<h3 class="text">It ${out.ss ? `is` : `is not`} possible to construct a sum of ${k} from the set ${listToString(list)}`;
 }

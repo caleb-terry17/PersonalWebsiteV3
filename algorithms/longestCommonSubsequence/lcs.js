@@ -125,7 +125,7 @@ function computeLCS() {
 
     // checking for too large of input
     if (str1.length > 100 || str2.length > 100) {
-        lcsOut.innerHTML = "<h3>Input Too Large (>100)</h3>";
+        lcsOut.innerHTML = `<h3 class="text">Input Too Large (>100)</h3>`;
         return; 
     }
 
