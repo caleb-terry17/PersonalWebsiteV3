@@ -261,5 +261,3 @@ function computeHC() {
     // appending div to html document
     hc.appendChild(div);
 }
-
-// div.classList.add('className');
