@@ -231,6 +231,11 @@ function computeHC() {
     let h3Tree = document.createElement('h3');
     let h3Encoding = document.createElement('h3');
 
+    // adding 'text' class to tags for appropriate text color
+    div.classList.add("text");
+    h3Tree.classList.add("text");
+    h3Encoding.classList.add("text");
+
     // adding id to div tag
     div.id = "huffmanTable"
 
@@ -256,3 +261,5 @@ function computeHC() {
     // appending div to html document
     hc.appendChild(div);
 }
+
+// div.classList.add('className');

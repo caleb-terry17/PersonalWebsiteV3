@@ -70,25 +70,28 @@
             <br>
 
             &nbsp;&nbsp;&nbsp;&nbsp; We start out by counting the frequency of each character. These frequencies are then sorted in ascending order. From there, we will construct a binary tree of the frequencies: 
+        </p>
 
-            <ol>
-                <li>
-                    Pop the first two characters in the list (the first two should have the lowest frequencies).
-                </li>
 
-                <li>
-                    Create a node with the first node popped as its left child and the second as its right child. This node should record the sum of its children's frequencies as its frequency. 
-                </li>
+        <ol class="text">
+            <li>
+                Pop the first two characters in the list (the first two should have the lowest frequencies).
+            </li>
 
-                <li>
-                    Push this node to the list in sorted order by frequencies. 
-                </li>
+            <li>
+                Create a node with the first node popped as its left child and the second as its right child. This node should record the sum of its children's frequencies as its frequency. 
+            </li>
 
-                <li>
-                    Repeat steps 1-3 while the array has a length greater than 1. 
-                </li>
-            </ol>
+            <li>
+                Push this node to the list in sorted order by frequencies. 
+            </li>
 
+            <li>
+                Repeat steps 1-3 while the array has a length greater than 1. 
+            </li>
+        </ol>
+
+        <p class="text">
             &nbsp;&nbsp;&nbsp;&nbsp; Now that the tree is built, the encoding for each letter comes from traversing the tree to that character. While traversing the tree to get to the character, anytime you go left, you add a 0, and anytime you go right you add a 1 to the bit representation for that character. 
         
             <br>
@@ -100,7 +103,7 @@
     <!--input text box-->
     <div class="container">
         <h1 class="text">Try It!</h1>
-        <p class="text">Enter...</p>
+        <p class="text">Enter a series of characters you would like to see the huffman encoding for.</p>
         
         <br>
 
