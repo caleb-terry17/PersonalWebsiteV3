@@ -97,7 +97,7 @@ function renderTable() {
     }
 
     // adding informative text on next steps
-    document.getElementById("tableText").innerHTML = "Select barriers and the starting and ending points for search by clicking on the squares. <br> Barriers will be highlighted in yellow, starting point in green, and ending point in red. <br>"
+    document.getElementById("tableText").innerHTML = `<p class="text">Select barriers and the starting and ending points for search by clicking on the squares. <br> Barriers will be highlighted in yellow, starting point in green, and ending point in red. <br></p>`
 
     // adding color selection buttons
     let greenButton = `<button style="background-color: ${green}" onclick="setSelection('${green}')" name="e">Start</button>`;
