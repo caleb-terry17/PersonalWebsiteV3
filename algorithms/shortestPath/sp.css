@@ -1,0 +1,48 @@
+:root {
+    --color1: #000000;
+    --color2: #FFF;
+}
+
+.container {
+    border: solid;
+    border-radius: 10px;
+    border-color: var(--color1);
+    padding: 20px;
+    max-width: 300px;
+    margin: 10vh 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    background-color: var(--color2);
+}
+
+.text {
+    color: var(--color1);
+}
+
+/* styling specific to shortest path */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table tr {
+    height: 20px;
+}
+
+table td {
+    border: 1px solid var(--color1);
+    width: 20px;
+}
+
+table button {
+    width: 20px;
+    height: 20px;
+}
+
+/* div .colorButtons {
+    margin-left: auto;
+    margin-right: auto;
+} */
